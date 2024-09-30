@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../CSS/style.css"/>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <title>Aventuriers Des Rails - Nathan FRANCESKIN</title>
+</head>
+<body>
+<header>
+  <nav id="navbar" data-scroll-change="20" data-scroll-change-unit="vh">
+    <div id="navbarTitle">
+      <div class="photo small">
+        <img src="../../ressources/img/NFImgTete.png" alt="Photo de présentation">
+      </div>
+      <p class="site-title">Nathan FRANCESKIN</p>
+    </div>
+    <div class="navbar">
+      <a class="navitem" href="./accueil.html">
+        <p>Présentation</p>
+      </a>
+      <a class="navitem" href="./CV.html">
+        <p>CV en ligne</p>
+      </a>
+      <a class="navitem" href="./projets.html">
+        <p class="current-page">Projets</p>
+      </a>
+      <a class="navitem" href="./contact.html">
+        <p>Me contacter</p>
+      </a>
+    </div>
+  </nav>
+  <script src="../JS/navbar.js"></script>
+</header>
+<main id="project">
+  <div class="empty"></div>
+  <div class="banner" id="aventuriers-du-rail">
+    <h1>
+      Portage des Aventuriers des Rails : Autour du monde
+    </h1>
+  </div>
+  <section>
+    <h1>Informations sur le projet</h1>
+    <div class="description">
+      <div class="text">
+        <div class="about-project">
+          <p><span class="bold">Cadre du projet : </span>SAÉ de développement de deuxième semestre de BUT</p>
+          <p><span class="bold">Technologies utilisées : </span>Java 18, JavaFX 18</p>
+          <p><span class="bold">Rôle : </span>Développeur Frontend et Backend</p>
+          <p><span class="bold">Statut : </span>Terminé</p>
+        </div>
+        <h2>Description</h2>
+        <p>
+          Ce projet était notre SAÉ de développement de deuxième semestre, comptant pour les composantes de Développement et d'Optimisation du BUT Informatique
+          (UE 1 et 2). Nous devions faire un portage du jeu de plateau <span class="under italic">Les Aventuriers du Rail : Autour du monde</span> avec le
+          langage de programmation Java et le framework d'IHM JavaFX.
+        </p>
+        <p>
+          Le projet s'est déroulé en 3 étapes. La première étape était de développer le jeu suivant les règles et une base de code fournie par les enseignants
+          au lancement de la SAÉ. Nous devions donc développer en Java les différentes mécaniques de jeu, et la boucle principale de jeu. Nous devions régulièrement
+          faire des tests unitaires à l'aide de l'API Jupiter, et nous pouvions tester le jeu avec une interface web de tests fournie dans le projet.
+        </p>
+        <p>
+          La deuxième étape était de développer une API Graphes afin de l'intégrer au jeu pour pouvoir utiliser des algorithmes de calcul de routes
+          les plus courtes reliant deux ou plusieurs villes. Cela permettrait donc à l'interface d'afficher au joueur les routes les plus courtes lui
+          permettant de compléter une destination, mais aussi pour permettre à un ordinateur de pouvoir prendre des décisions stratégiques.
+        </p>
+        <p>
+          Enfin, la dernière étape du projet était de réaliser une interface graphique avec JavaFX. Pour ce faire, nous avons utilisé le SceneBuilder pour générer
+          des fichiers FXML que nous avons directement intégré au projet, en connectant les composants entre eux. Pour la partie jeu, une correction nous a été
+          fournie afin d'avoir à disposition les possibles fonctionnalités manquantes de la première partie.
+        </p>
+        <h2>Contribution</h2>
+        <p>
+          Dans ce projet, je me suis occupé de certaines mécaniques de jeu (piocher une carte, capturer une route, échange des pions...), de l'implémentation de
+          l'algorithme de Dijkstra dans la classe Graphe, ainsi que de la liaison entre les composants internes et l'interface graphique.
+        </p>
+      </div>
+      <div class="media">
+        <div class="frame">
+          <img src="../../ressources/img/aventDuRail.png">
+          <p>L'interface du jeu, réalisée avec JavaFX</p>
+        </div>
+      </div>
+    </div>
+    <div class="button-container">
+      <a class="button lightblue" href="./projets.html">
+        <div class="content">
+          <img src="../../ressources/img/view.png" width="24" height="24">
+          <span class="label">
+                  Retour aux projets
+                </span>
+        </div>
+      </a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-content">
+    <h2>Nathan FRANCESKIN</h2>
+    <div class="bottom-navbar">
+      <div>
+        <a class="page-title">Présentation</a>
+        <a class="section-title" href="./accueil.html#about-me">À propos de moi</a>
+        <a class="section-title" href="./accueil.html#course">Parcours</a>
+        <a class="section-title" href="./accueil.html#skills">Compétences</a>
+      </div>
+      <div>
+        <a class="page-title">CV et Portfolio</a>
+        <a class="section-title" href="../../ressources/documents/CV_FRANCESKIN_Nathan.pdf">Voir CV</a>
+        <a class="section-title" href="../../ressources/documents/CV_FRANCESKIN_Nathan.pdf" download="">Télécharger CV</a>
+        <a class="section-title" href="../../ressources/documents/Portfolio_FRANCESKIN_Nathan.pdf">Voir Portfolio</a>
+        <a class="section-title" href="../../ressources/documents/Portfolio_FRANCESKIN_Nathan.pdf" download="">Télécharger Portfolio</a>
+      </div>
+      <div>
+        <a class="page-title">Projets</a>
+        <a class="section-title" href="./aventuriers-des-rails.html">Aventuriers des Rails</a>
+        <a class="section-title" href="./nuit-de-l-info.html">Nuit de l'info</a>
+        <a class="section-title" href="./salt.html">S.Alt</a>
+        <a class="section-title" href="./weather-wizardry.html">Weather Wizardry</a>
+        <a class="section-title" href="./wisp-madness.html">Wisp Madness</a>
+        <a class="section-title" href="./escape-game.html">Escape Game</a>
+        <a class="section-title" href="./serveur.html">Serveur</a>
+      </div>
+      <div>
+        <a class="page-title">Me contacter</a>
+        <a class="section-title" href="./contact.html">Téléphone</a>
+        <a class="section-title" href="https://www.linkedin.com/in/nathan-franceskin-6344b0246/">LinkedIn</a>
+        <a class="section-title" href="https://github.com/NoLucci">GitHub</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

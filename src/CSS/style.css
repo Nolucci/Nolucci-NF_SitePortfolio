@@ -1,0 +1,1070 @@
+@import url("https://fonts.googleapis.com/css?family=Kdam+Thmor+Pro");
+@import url("https://fonts.googleapis.com/css?family=DM+Sans");
+
+/* Document style rules */
+
+html, body
+{
+    font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+    background-color: #1F1F1F;
+    color: white;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1{
+    height: fit-content;
+    text-align: center;
+}
+
+#projectTitle{
+    margin-bottom: 35%;
+    z-index: 50 !important;
+}
+
+#projectName{
+    z-index: 2;
+}
+
+/* Navigation bar style rules */
+
+nav
+{
+    display: flex;
+    position: fixed;
+    align-items: stretch;
+    font-family: "Open Sans Regular", sans-serif;
+    width: 100vw;
+    height: 80px;
+    z-index: 99;
+    
+    background-color: #3F3F3F00;
+
+    transition-duration: 0.4s;
+    transition-property: background-color, height;
+    justify-content: right ;
+}
+
+nav a
+{
+    text-decoration: none;
+}
+
+nav a, nav p
+{
+    font-family: "DM Sans", Arial, Helvetica, serif;
+    color: white;
+}
+
+nav p.site-title
+{
+    font-family: 'Kdam Thmor Pro', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+nav > div
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    left: 0;
+}
+
+nav > div.navbar
+{
+    align-items: stretch;
+    justify-content: right;
+    width: 50%
+}
+
+nav > div.navbar a, nav > div.navbar p
+{
+    font-weight: bold;
+}
+
+nav > div.navbar p.current-page
+{
+    color: rgb(82, 215, 255)
+}
+
+
+nav > div.navbar > .navitem
+{
+    background-color: transparent;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+
+    font-size: 20px;
+
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+nav > div.navbar > i.navitem
+{
+    height: 100%;
+    text-align: center;
+}
+
+nav > div.navbar > .navitem:hover
+{
+    background-color: #595959;
+    transition-property: background-color;
+    transition: 0.3s;
+}
+
+nav > div.navbar > div.navitem > div.submenu
+{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    visibility: hidden;
+    opacity: 0;
+    font-size: 16px;
+
+    position: absolute;
+    left: 0;
+    top: 80px;
+
+    width: 12vw;
+    background-color: #DFDFDF;
+    z-index: 1;
+
+    transition-property: opacity, visibility;
+    transition-duration: 0.2s;
+}
+
+nav > div.navbar > div.navitem:hover > div.submenu,
+nav > div.navbar > div.navitem > div.submenu:hover
+{
+    visibility: visible;
+
+    opacity: 1;
+    transition-property: opacity, visibility;
+    transition-duration: 0.2s;
+}
+
+nav > div.navbar > div.navitem > div.submenu a
+{
+    padding: 16px;
+    color: black;
+}
+
+nav > div.navbar > div.navitem > div.submenu a:hover
+{
+    background-color: #BFBFBF;
+}
+
+nav > div.icons
+{
+    display: flex;
+    justify-content: right;
+}
+
+nav > div.icons > a
+{
+    display: flex;
+    justify-content: right;
+    padding-right: 16px;
+}
+
+/* First panel style rules */
+
+div.head
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 99vh;
+}
+
+div.head > div.container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+
+
+div.head > div.container > div
+{
+    padding: 0 64px;
+}
+
+div.head > div.container > div.left-box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px white solid;
+}
+
+div.head > div.container > div.right-box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 42%;
+    word-wrap: break-word;
+}
+
+div.head > div.container div.page-description p
+{
+    font-size: 14pt;
+    text-align: justify;
+}
+
+div.head > div.container div.page-description span.section
+{
+    font-weight: bold;
+    color: rgb(127, 223, 255);
+}
+
+div.head > div.container div.page-description span.warning
+{
+    font-weight: bold;
+    color: rgb(255, 230, 88);
+}
+
+div.head div.titles *
+{
+    text-align: center;
+}
+
+div.head div.titles h1
+{
+    font-family: 'Kdam Thmor Pro', Courier, monospace;
+}
+
+div.photo
+{
+    border-radius: 50%;
+    background-color: white;
+    height: 264px;
+    width: 264px;
+}
+
+div.photo img
+{
+    margin: 4px;
+    width: 256px;
+    height: 256px;
+    border-radius: 50%;
+}
+
+div.photo.small
+{
+    margin: 0 16px;
+    height: 52px;
+    width: 52px;
+}
+
+div.photo.small img
+{
+    margin: 2px;
+    width: 48px;
+    height: 48px;
+}
+
+/* All sections style rules */
+
+section
+{
+    padding: 8px 0;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+}
+
+/* Presentation page */
+
+main#presentation > section > div.content
+{
+    margin: 0 8vw;
+    width: fit-content;
+}
+
+main#presentation section:nth-child(odd)
+{
+    background-color: #2F2F2F;
+}
+
+main#presentation section:nth-child(even)
+{
+    background-color: #4F4F4F;
+}
+
+main#presentation div.course
+{
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main#presentation div.course > table
+{
+    border-collapse: collapse;
+    width: 70%;
+}
+
+main#presentation div.course > table th
+{
+    text-align: center;
+    font-size: 18pt;
+    border-bottom: 2px white solid;
+}
+
+main#presentation div.course > table td
+{
+    width: 50%;
+}
+
+main#presentation div.course > table td > div
+{
+    padding: 16px 32px;
+}
+
+main#presentation div.course > table td > div > h2
+{
+    font-size: 16pt;
+    text-align: center;
+    text-wrap: balance;
+}
+
+main#presentation div.course > table th:not(:last-of-type),
+main#presentation div.course > table td:not(:last-of-type)
+{
+    border-right: 2px white solid;
+}
+
+main#presentation div.skills-grid
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 16px 0;
+}
+
+main#presentation div.skills-grid > div.line
+{
+    display: flex;
+    flex-direction: row;
+    column-gap: 8px;
+    justify-content: space-around;
+    padding: 0 0 16px 0;
+}
+
+main#presentation div.skills-grid > div.line > div.skill
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 15%;
+
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #2F2F2F;
+}
+
+main#presentation div.skills-grid > div.line > div.skill > img
+{
+    margin: 8px 0 8px 0;
+}
+
+main#presentation div.skills-grid > div.line > div.skill > h4
+{
+    margin: 8px 0 4px 0;
+    color: white;
+    font-size: 14pt;
+}
+
+main#presentation div.skills-grid > div.line > div.skill > i,
+main#presentation div.skills-grid > div.line > div.skill > p
+{
+    text-align: center;
+    text-wrap: balance;
+}
+
+main#presentation div.skills-grid > div.line > div.skill > p
+{
+    margin: 0 0 4px 0;
+    font-size: 13pt;
+}
+
+/* Projects page */
+
+#projects{
+    width: 100%;
+    height: 100%;
+    position: relative; /* Assurez-vous que l'élément parent a une position relative */
+    background-size: cover;
+    background-position: center;
+    animation: bgAnim 20s infinite;
+}
+
+main#projects section
+{
+    padding: 0;
+}
+
+main#projects section.banner-container
+{
+    padding-top: 16px;
+    background-color: #2F2F2F;
+}
+
+main#projects section.banner-container > h1
+{
+    margin: 0 0 16px 24px;
+}
+
+main#projects section.banner-container div.banner
+{
+    transition: background-color 0.2s linear;
+
+    display: flex;
+    align-items: stretch;
+
+    background-color: #3F3F3F;
+    min-height: 128px;
+    max-height: 128px;
+}
+
+main#projects section.banner-container div.banner:hover
+{
+    transition: background-color 0.2s linear;
+
+    background-color: #5F5F5F;
+}
+
+main#projects section.banner-container div.banner > a
+{
+    display: block;
+    width: 100%;
+    height: auto;
+    text-decoration: none;
+    color: white;
+}
+
+main#projects section.banner-container div.banner > a > div
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-left: 48px;
+    width: 50%;
+    height: 100%;
+}
+
+main#projects section.banner-container div.banner > a > div > h1,
+main#projects section.banner-container div.banner > a > div > p
+{
+    margin: 8px 0;
+}
+
+main#projects div.banner#wolves-of-raeine
+{
+    background-image: url(../img/banners/wor.png);
+    background-position: center;
+}
+
+main#projects div.banner#salt
+{
+    background-image: url(../img/banners/salt.png);
+    background-position: center;
+}
+
+main#projects div.banner#aventuriers-du-rail
+{
+    background-image: url(../img/banners/adr.png);
+    background-position: center;
+}
+
+main#projects div.banner#nuit-de-l-info
+{
+    background-image: url(../img/banners/ndi.png);
+    background-position: center;
+}
+
+main#projects div.banner#wolves-of-raeine:hover a
+{
+    transition: background-color 0.2s linear;
+    background-color: rgba(0, 0, 0, 0.33);
+}
+
+main#projects div.banner#salt:hover a
+{
+    transition: background-color 0.2s linear;
+    background-color: rgba(0, 0, 0, 0.33);
+}
+
+main#projects div.banner#aventuriers-du-rail:hover a
+{
+    transition: background-color 0.2s linear;
+    background-color: rgba(0, 0, 0, 0.33);
+}
+
+main#projects div.banner#nuit-de-l-info:hover a
+{
+    transition: background-color 0.2s linear;
+    background-color: rgba(0, 0, 0, 0.33);
+}
+
+/* Project page */
+
+main#project
+{
+    padding-top: 64px;
+}
+
+main#project > div.banner
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 0 96px;
+
+    background-color: #1F1F1F;
+    height: 320px;
+}
+
+main#project > div.banner > h1
+{
+    font-family: 'Kdam Thmor Pro', Courier, monospace;
+    font-weight: normal;
+    font-size: 28pt;
+    margin: 8px 0;
+}
+
+main#project > div.banner#escape-game
+{
+    background-image: url(../../ressources/img/escapeGameSite.png);
+}
+
+main#project > div.banner#salt
+{
+    background-image: url(../../ressources/img/saltAccueil.png);
+}
+
+main#project > div.banner#aventuriers-du-rail
+{
+    background-image: url(../../ressources/img/mapADR.jpg);
+}
+
+main#project > div.banner#ndi-2023
+{
+    background-image: url(../../ressources/img/ndi.PNG);
+}
+
+main#project > div.banner#weather-wizardry
+{
+    background-image: url(../../ressources/img/WW.png);
+}
+
+main#project > div.banner#wisp-madness
+{
+    background-image: url(../../ressources/img/WM.png);
+}
+
+main#project > div.banner#serveur
+{
+    background-image: url(../../ressources/img/serveurBG.jpeg);
+}
+
+
+main#project > div.banner > h2
+{
+    font-weight: normal;
+    font-style: italic;
+    font-size: 16pt;
+    margin: 0 0;
+}
+
+main#project > section
+{
+    background-color: #4F4F4F;
+    padding: 16px 4vw;
+    display: block;
+}
+
+main#project > section > h1
+{
+    margin-bottom: 16px;
+}
+
+main#project > section > div.description h2
+{
+    margin: 16px 0;
+    font-size: 16pt;
+}
+
+main#project > section div.about-project
+{
+    margin: 0 0 24px 0;
+}
+
+main#project > section div.about-project > p
+{
+    font-size: 11pt;
+    font-style: italic;
+    margin: 0 0 4px 0;
+}
+
+main#project > section > div.description
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main#project > section > div.description > div.media
+{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+main#project > section > div.description > div.media > div.frame
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main#project > section > div.description > div.media > div.frame > p
+{
+    text-align: center;
+    margin-top: 16px;
+    font-size: 11pt;
+    font-style: italic;
+}
+
+main#project > section > div.description > div.text
+{
+    width: 60%;
+}
+
+main#project > section > div.description > div.text > p
+{
+    margin: 0 0 16px 0;
+}
+
+/* Footer */
+
+footer > div.footer-content
+{
+    border-top: 4px rgb(42, 172, 247) solid;
+    padding: 32px 10vw;
+}
+
+footer > div.footer-content > h2
+{
+    margin-bottom: 4px;
+    font-size: 16pt;
+    font-weight: normal;
+    font-family: 'Kdam Thmor Pro', Courier, monospace;
+    color: #CFCFCF;
+}
+
+footer > div.footer-content > div:not(:last-of-type)
+{
+    border-bottom: 1px #4F4F4F solid;
+}
+
+footer > div.footer-content > div.bottom-navbar
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer > div.footer-content > div.bottom-navbar > div
+{
+    display: flex;
+    flex-direction: column;
+    min-width: 20%;
+    padding-bottom: 32px;
+}
+
+footer > div.footer-content > div.bottom-navbar > div > a.page-title
+{
+    transition: color 0.2s linear;
+    font-size: 14pt;
+    margin: 16px 0;
+    color: #BFBFBF;
+}
+
+footer > div.footer-content > div.assets > h4
+{
+    font-size: 14pt;
+    font-weight: normal;
+    margin: 32px 0;
+    color: #BFBFBF;
+}
+
+footer > div.footer-content > div.bottom-navbar > div > a.page-title:hover
+{
+    transition: color 0.2s linear;
+    cursor: pointer;
+    color: white;
+}
+
+footer > div.footer-content > div.bottom-navbar > div > a.section-title
+{
+    transition: color 0.2s linear;
+    margin: 4px 0;
+    text-decoration: none;
+    color: #9F9F9F;
+}
+
+footer > div.footer-content > div.bottom-navbar > div > a.section-title:hover
+{
+    transition: color 0.2s linear;
+    color: #CFCFCF;
+}
+
+/* Miscellanous */
+
+a
+{
+    color: rgb(127, 223, 255);
+    transition: 0.2s;
+}
+
+a:hover
+{
+    color: rgb(0, 179, 255);
+    transition: 0.2s;
+}
+
+div.button-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div.button-container :not(:first-child)
+{
+    margin-left: 16px;
+}
+
+a.button
+{
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    background-color: white;
+}
+
+a.button.lightblue
+{
+    background-color: rgb(51, 180, 255);
+}
+
+div.coordinate, a.button div.content
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+div.coordinate span, div.coordinate a
+{
+    margin: 8px;
+    font-size: 14pt;
+}
+
+a.button span.label
+{
+    margin-left: 8px;
+    font-weight: bold;
+    font-size: 14pt;
+    color: black;
+}
+
+h2
+{
+    margin: 0;
+}
+
+p.quote
+{
+    font-style: italic;
+}
+
+p span.bold
+{
+    font-weight: bold;
+}
+
+p span.under
+{
+    text-decoration: underline;
+}
+
+p span.italic
+{
+    font-style: italic;
+}
+
+
+/* Carousel */
+
+.contactos {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 230px;
+    position: relative;
+    perspective: 1000px;
+}
+
+.cont2{
+    margin-top: -13%;
+}
+
+.carousel {
+    height: 100%;
+    width: 150px;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    animation: rotateAnim 28s ease infinite;
+    transform-origin: center;
+}
+
+.carousel2 {
+    height: 100%;
+    width: 150px;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    animation: rotateAnim2 28s ease infinite;
+    transform-origin: center;
+    margin-top: -20%;
+}
+
+
+.item {
+    margin-top: 30px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    width: 150px;
+    height: 150px;
+    line-height: 100px;
+    font-size: 2em;
+    text-align: center;
+    color: #FFF;
+    opacity: 1;
+    border-radius: 10px;
+}
+
+.item2 {
+    margin-top: 30px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    width: 200px;
+    height: 200px;
+    font-size: 2em;
+    color: #FFF;
+    opacity: 1;
+    border-radius: 10px;
+    text-align: center;
+    overflow: auto;
+    text-decoration: none;
+}
+
+.a {
+    transform: rotateY(0deg) translateZ(300px);
+    background: rgba(255, 41, 41, 0.5);
+}
+
+.b {
+    transform: rotateY(35deg) translateZ(300px);
+    background: rgba(236, 83, 0, 0.5);
+}
+.c {
+    transform: rotateY(70deg) translateZ(300px);
+    background: rgba(0, 216, 236, 0.5);
+}
+.d {
+    transform: rotateY(104deg) translateZ(300px);
+    background: rgba(236, 232, 0, 0.5);
+}
+.e {
+    transform: rotateY(140deg) translateZ(300px);
+    background: rgba(51, 0, 236, 0.5);
+}
+.f {
+    transform: rotateY(175deg) translateZ(300px);
+    background: rgba(157, 0, 236, 0.5);
+}
+
+.g {
+    transform: rotateY(212deg) translateZ(300px);
+    background: rgb(35, 99, 148, 0.5);
+}
+
+.h {
+    transform: rotateY(249deg) translateZ(300px);
+    background: rgba(236, 63, 0, 0.5);
+}
+
+.i {
+    transform: rotateY(286deg) translateZ(300px);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.j {
+    transform: rotateY(323deg) translateZ(300px);
+    background: rgba(0, 138, 236, 0.5);
+}
+
+.a2 {
+    transform: rotateY(0deg) translateZ(300px);
+    background: rgb(180, 75, 65,0.8);}
+.b2 {
+    transform: rotateY(53deg) translateZ(300px);
+    background: rgb(12, 59, 101,0.8);}
+.c2 {
+    transform: rotateY(106deg) translateZ(300px);
+    background: rgb(180, 82, 114,0.8);}
+.d2 {
+    transform: rotateY(159deg) translateZ(300px);
+    background: rgb(157, 98, 48,0.8);}
+.e2 {
+    transform: rotateY(212deg) translateZ(300px);
+    background: rgb(255, 255, 255,0.8);
+    color : #161616;}
+.f2 {
+    transform: rotateY(265deg) translateZ(300px);
+    background: rgb(113, 134, 96,0.8);}
+.g2 {
+    transform: rotateY(312deg) translateZ(300px);
+    background: rgb(78, 105, 189,0.8);}
+
+@keyframes rotateAnim {
+
+    0% { transform: rotateY(0deg);}
+    10% { transform: rotateY(-35deg);}
+    20% { transform: rotateY(-70deg);}
+    30% { transform: rotateY(-104deg);}
+    40% { transform: rotateY(-140deg);}
+    50% { transform: rotateY(-175deg);}
+    60% { transform: rotateY(-212deg);}
+    70% { transform: rotateY(-249deg);}
+    80% { transform: rotateY(-286deg);}
+    90% { transform: rotateY(-323deg);}
+    100% { transform: rotateY(0deg);}
+
+}
+
+@keyframes rotateAnim2 {
+    0% { transform: rotateY(0deg); }
+    14.3% { transform: rotateY(-53deg);}
+    28.6% { transform: rotateY(-106deg);}
+    42.9% { transform: rotateY(-159deg);}
+    57.2% { transform: rotateY(-212deg);}
+    71.5% { transform: rotateY(-265deg);}
+    85.9% { transform: rotateY(-315deg);}
+    100% { transform: rotateY(0deg);}
+}
+
+@media only screen and (max-width: 1200px) {
+    br {
+        display: none;
+    }
+
+    nav{
+        justify-content: center;
+    }
+    nav > div.navbar{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #navbarTitle{
+        display: none;
+    }
+}
+
+.textContent{
+    width: 55% !important;
+    word-wrap: break-word;
+}
+
+main#project > div.banner#escape-game
+{
+    background-image: url(../../ressources/img/escapeGameSite.png);
+}
+
+main#project > div.banner#salt
+{
+    background-image: url(../../ressources/img/saltAccueil.png);
+}
+
+main#project > div.banner#aventuriers-du-rail
+{
+    background-image: url(../../ressources/img/mapADR.jpg);
+}
+
+main#project > div.banner#ndi-2023
+{
+    background-image: url(../../ressources/img/ndi.PNG);
+}
+
+main#project > div.banner#weather-wizardry
+{
+    background-image: url(../../ressources/img/WW.png);
+}
+
+main#project > div.banner#wisp-madness
+{
+    background-image: url(../../ressources/img/WM.png);
+}
+
+main#project > div.banner#serveur
+{
+    background-image: url(../../ressources/img/serveurBG.jpeg);
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
